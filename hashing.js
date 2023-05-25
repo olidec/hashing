@@ -1,8 +1,11 @@
-function textToNumber(text) {
-    return parseInt([...text].map(c => c.charCodeAt(0)).join(''));
+function convertStringToASCII(string) {
+    var asciiCodes = [];
+    for (var i = 0; i < string.length; i++) {
+      var charCode = string.charCodeAt(i);
+      asciiCodes.push(charCode);
+    }
+    return asciiCodes.join('');
   }
   
-  const h = textToNumber("Hello");
-  
-  console.log("Your text as a number: " + h);
-  console.log("Your text 'hashed': " + (h % 11));
+  var inputString = "Hello, World!";
+  var result = convertStringToASCII(inputString);

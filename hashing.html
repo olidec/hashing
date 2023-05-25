@@ -11,8 +11,10 @@
     Type your text here.
     <br>
     <input type="text" id="input-text">
-    <button onclick="document.getElementById('output-text').innerHTML=textToNumber(document.getElementById('input-text').value) % 11">Hash!</button>
-    <h3>Hashed Output</h3>
+    <button onclick="document.getElementById('output-text').innerHTML=parseInt(convertStringToASCII(document.getElementById('input-text').value));document.getElementById('hashed-text').innerHTML=parseInt(convertStringToASCII(document.getElementById('input-text').value))%11">Hash!</button>
+    <h3>Output as ASCII Code</h3>
     <p id="output-text"></p>
+    <h3>Hashed Output</h3>
+    <p id="hashed-text"></p>
 </body>
 </html>
